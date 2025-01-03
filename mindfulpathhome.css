@@ -1,0 +1,210 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    overflow-x: hidden;
+}
+
+.app-container {
+    max-width: 100%;
+    width: 390px; /* Entspricht der Breite des iPhone X */
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    overflow: hidden;
+    background-color: white;
+    height: 100vh; 
+    display: flex;
+    flex-direction: column;
+}
+
+/* Welcome Section */
+.welcome-section {
+    text-align: left;
+    padding: 5vh 5vw; /* Padding in Prozent für responsives Design */
+    position: relative;
+    flex: 1;
+}
+.blurred-text {
+    position: absolute; /* Place it above the background */
+    bottom: 15%; /* Adjust based on where you want the text */
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 5px 10px;
+    background: rgba(255, 255, 255, 0.3); /* Semi-transparent background */
+    backdrop-filter: blur(5px); /* Applies the blur effect */
+    border-radius: 8px; /* Optional: Rounded corners */
+    color: #ffffff; /* Text color */
+    font-size: 4vw; /* Adjust font size */
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Optional: Add some shadow */
+}
+
+
+.welcome-section .background-image {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    height: auto;
+    max-height: 40vh; /* Maximalhöhe der Hintergrundbilder */
+    object-fit: cover;
+}
+
+.welcome-section h1 {
+    margin: 10px 0px;
+    margin-bottom: 5px;
+}
+
+.welcome-section span {
+    color: green;
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.welcome-section p {
+    color: #ffffff;
+    margin-top: -50px;
+    text-align: center;
+}
+.extras-section {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 5vw;
+}
+
+.extra-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: #f8f8f8;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    margin: 0 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.extra-item:hover {
+    background: #e8f5e9;
+}
+
+.extra-item i {
+    font-size: 6vw;
+    color: #388e3c;
+    margin-bottom: 10px;
+}
+
+.extra-item span {
+    font-size: 4.5vw;
+    color: #333;
+}
+
+/* Tasks Section */
+.tasks-section {
+    padding: 1vh 5vw;
+    flex: 2;
+    overflow-y: auto;
+}
+
+.task {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.task input[type="checkbox"] {
+    margin-right: 10px;
+    width: 5vw;
+    height: 5vw;
+}
+
+.task label {
+    font-size: 4vw;
+    line-height: 1.5;
+}
+
+.more-button {
+    display: block;
+    margin: 20px auto;
+    padding: 12px 25px;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 4vw;
+    float: left;
+    background: linear-gradient(to right, rgb(0, 91, 0), rgba(0, 128, 0, 0.6));
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Navigation Bar */
+.bottom-nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 0;
+    background-color: #fff;
+    border-top: 1px solid #ccc;
+    flex-shrink: 0;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 3.5vw;
+    color: #555;
+    cursor: pointer;
+}
+
+.nav-item:hover {
+    color: green;
+}
+
+.nav-icon {
+    width: 6vw;
+    height: 6vw;
+    margin-bottom: 5px;
+}
+
+/* Media Query for iPhone X */
+@media screen and (max-width: 390px) {
+    .app-container {
+        width: 100%;
+        height: 100vh;
+    }
+
+    .welcome-section h1 {
+        font-size: 6vw;
+    }
+
+    .welcome-section p {
+        font-size: 4vw;
+    }
+
+    .task label {
+        font-size: 5vw;
+    }
+
+    .more-button {
+        font-size: 4.5vw;
+    }
+
+    .nav-item {
+        font-size: 4vw;
+    }
+
+    .nav-icon {
+        width: 7vw;
+        height: 7vw;
+    }
+}
