@@ -1,0 +1,125 @@
+/* General Styles */
+body {
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    overflow-x: hidden;
+    height: 100%;
+}
+
+.app-container {
+    max-width: 100%;
+    width: 390px;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    overflow: hidden;
+    background-color: white;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 50px;
+}
+
+h1 {
+    padding: 5vh;
+    text-align: left;
+    color: #333;
+    margin-bottom: -3vh;
+}
+
+input[type="text"] {
+    width: calc(100% - 16%);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    margin-bottom: 2px;
+    margin-left: 5vw;
+    margin-right:10vw;
+    
+}
+
+.more-button {
+    width: calc(100% - 9%);
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    background-color: green;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    margin-left: 5vw;
+    margin-right:10vw;
+}
+
+.more-button:hover {
+    background-color: darkgreen;
+}
+
+/* Tasks Section */
+.tasks-section {
+    padding: 1vh 5vw;
+    flex: 2;
+    overflow-y: auto;
+}
+.task {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    margin-top: 5px;
+}
+
+.task input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.task button {
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.task button i {
+    color: rgb(43, 43, 43);
+    font-size: 18px;
+}
+
+/* Navigation Bar */
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 0;
+    background-color: #fff;
+    border-top: 1px solid #ccc;
+    flex-shrink: 0;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000; 
+}
+
+.nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 3.5vw;
+    color: #555;
+    cursor: pointer;
+}
+
+.nav-item:hover {
+    color: green;
+}
+
+.nav-icon {
+    width: 6vw;
+    height: 6vw;
+    margin-bottom: 5px;
+}

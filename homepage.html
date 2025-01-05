@@ -19,20 +19,27 @@
 
 <!-- Tasks Section -->
 <div class="tasks-section">
-    <div class="task">
-        <input type="checkbox" id="task1">
-        <label for="task1">Ein Kapitel in einem Buch lesen</label>
-    </div>
-    <div class="task">
-        <input type="checkbox" id="task2">
-        <label for="task2">Spaziergang in der Natur machen</label>
-    </div>
-    <div class="task">
-        <input type="checkbox" id="task3">
-        <label for="task3">Eine gesunde Mahlzeit kochen</label>
-    </div>
-    <button class="more-button">Mehr</button>
+    <div id="taskListHomepage"></div>
 </div>
+
+<script>
+    // tasks auf der homepage
+    function loadTasksOnHomepage() {
+        const taskListHomepage = document.getElementById('taskListHomepage');
+        taskListHomepage.innerHTML = '';
+        const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+
+        tasks.forEach(taskText => {
+            const taskItem = document.createElement('div');
+            taskItem.className = 'task';
+            taskItem.innerHTML = `<input type="checkbox"><label>${taskText}</label>`;
+            taskListHomepage.appendChild(taskItem);
+        });
+    }
+
+    window.onload = loadTasksOnHomepage;
+</script>
+
 
 <!-- Auswahl Extras Section-->
 <div class="extras-section">
@@ -45,14 +52,15 @@
         <span>Protokollübersicht</span>
     </div>
 </div>
+
      <!-- Navigation Bar -->
 <div class="bottom-nav">
     <div class="nav-item">
-        <i class="fas fa-home nav-icon"></i>
+        <i class="fas fa-home nav-icon" onclick="window.location.href='homepage.html';"></i>
         <span>Home</span>
     </div>
     <div class="nav-item">
-        <i class="fas fa-tasks nav-icon"></i>
+        <i class="fas fa-tasks nav-icon" onclick="window.location.href='toDo.html';" ></i>
         <span>Aufgaben</span>
     </div>
     <div class="nav-item">
@@ -68,6 +76,5 @@
         <span>Einstellungen</span>
     </div>
 </div>
-    <!-- Navigation Bar --<script src="app.js"></script> kommt noch-->
 </body>
 </html>

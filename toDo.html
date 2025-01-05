@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do Liste</title>
+    <link rel="stylesheet" href="mindfulpathhome.css">
+    <link rel="stylesheet" href="todo_styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <h1>ToDo's</h1>
+        <input type="text" id="newTaskInput" placeholder="Weitere Aufgabe eingeben">
+        <button class="more-button" onclick="addTask()">Neue Aufgabe erstellen</button>
+        <div class="tasks-section"><div id="taskList"></div>
+        <div id="taskList">
+            <div class="task"><input type="checkbox"><label>Ein Kapitel in einem Buch lesen</label><button onclick="removeTask(this)"><i class="fas fa-trash-alt"></i></button></div>
+            <div class="task"><input type="checkbox"><label>Einen Spaziergang in der Natur machen</label><button onclick="removeTask(this)"><i class="fas fa-trash-alt"></i></button></div>
+        </div>    
+        </div>
+        <div class="bottom-nav">
+            <div class="nav-item" onclick="window.location.href='homepage.html';""><i class="fas fa-home nav-icon"></i><span>Home</span></div>
+            <div class="nav-item" onclick="window.location.href='toDo.html';">
+                <i class="fas fa-tasks nav-icon"></i>
+                <span>Aufgaben</span>
+            </div>
+            <div class="nav-item"><i class="fas fa-chart-line nav-icon"></i><span>Statistik</span></div>
+            <div class="nav-item"><i class="fas fa-question-circle nav-icon"></i><span>Fragen</span></div>
+            <div class="nav-item"><i class="fas fa-cogs nav-icon"></i><span>Einstellungen</span></div>
+        </div>
+    </div>
+    
+    <script>
+        
+        // speichert task
+        function addTask() {
+            const taskText = document.getElementById('newTaskInput').value;
+            if (taskText.trim() === '') return;
+            
+            let tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+            tasks.push(taskText);
+            localStorage.setItem('tasks', JSON.stringify(tasks));
+            
+            updateTaskList(); // UI aktualisieren
+            document.getElementById('newTaskInput').value = '';
+        }
+    
+        // löschen funktion
+        function removeTask(buttonElement) {
+            let tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+            const taskLabel = buttonElement.previousElementSibling.innerText;
+            tasks = tasks.filter(task => task !== taskLabel);
+            localStorage.setItem('tasks', JSON.stringify(tasks));
+            
+            updateTaskList();
+        }
+    
+        // lädt aus dem localStorage
+        function updateTaskList() {
+            const taskList = document.getElementById('taskList');
+            taskList.innerHTML = ''; // Bestehende Liste löschen
+            const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+    
+            tasks.forEach(taskText => {
+                const taskItem = document.createElement('div');
+                taskItem.className = 'task';
+                taskItem.innerHTML = `<input type="checkbox"><label>${taskText}</label><button onclick="removeTask(this)"><i class="fas fa-trash-alt"></i></button>`;
+                taskList.appendChild(taskItem);
+            });
+        }
+    
+        window.onload = updateTaskList;
+    </script>
+    
+</body>
+</html>
