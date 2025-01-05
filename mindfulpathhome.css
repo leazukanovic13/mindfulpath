@@ -29,7 +29,7 @@ body {
 }
 .blurred-text {
     position: absolute;
-    bottom: 15%;
+    bottom: 5%;
     left: 50%;
     transform: translateX(-50%);
     padding: 5px 10px;
