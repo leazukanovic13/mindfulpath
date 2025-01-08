@@ -1,0 +1,199 @@
+/* General Body Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    overflow-x: hidden;
+}
+
+.app-container {
+    max-width: 100%;
+    width: 390px;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    overflow: hidden;
+    background-color: white;
+    height: 100vh; 
+    display: flex;
+    flex-direction: column;
+}
+
+/* Tagebuch Section */
+.tagebuch-section h1 {
+    font-size: 24px;
+    color: #468151;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Form Labels */
+form label {
+    display: block;
+    font-size: 16px;
+    color: #2c2c2c;
+    margin: 10px 0 5px;
+}
+
+/* Form Textareas */
+form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #d9d9d9;
+    border-radius: 5px;
+    font-size: 14px;
+    resize: none;
+    background-color: #fafbff;
+}
+
+form textarea::placeholder {
+    color: #999;
+    font-style: italic;
+}
+
+/* Buttons */
+#moodButton, #saveButton {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 15px 0;
+    background: linear-gradient(90deg, #468151, #2c2c2c);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#moodButton:hover, #saveButton:hover {
+    background: #356941;
+}
+
+/* Mood Display Section */
+#moodDisplay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+}
+
+#moodImage {
+    width: 50px;
+    height: 50px;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* Slider Popup */
+.slider-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.slider-container {
+    text-align: center;
+    background: white;
+    border-radius: 15px;
+    padding: 20px;
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Emoji and Text Alignment */
+.emoji-with-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.emoji-with-text img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+.emoji-with-text span {
+    font-size: 18px;
+    color: #468151;
+    font-weight: bold;
+}
+
+/* Range Slider */
+#moodRange {
+    width: 100%;
+    margin: 15px 0;
+}
+
+/* Label Display */
+#moodLabel {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+#moodLabelDisplay {
+    font-size: 16px;
+    color: #468151;
+    font-weight: bold;
+}
+
+/* Close Button */
+#closeSlider {
+    background: #468151;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+#closeSlider:hover {
+    background: #356941;
+}
+
+/* Header */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 15px;
+    background-color: #fafbff;
+    border-bottom: 1px solid #d9d9d9;
+    margin-bottom: 10px;
+    border-radius: 20px 20px 0 0;
+}
+
+.back-button {
+    text-decoration: none;
+    color: #468151;
+    font-size: 16px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+.back-button i {
+    margin-right: 5px;
+}
+
+.header h1 {
+    font-size: 18px;
+    color: #2c2c2c;
+    font-weight: bold;
+    margin: 0;
+}
+

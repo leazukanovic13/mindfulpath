@@ -1,0 +1,72 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tagebuch</title>
+    <link rel="stylesheet" href="tagebuchstyle.css">
+    <script src="tagebuch.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    
+    <div class="app-container">
+        <div class="header">
+            <a href="../tagebuchOrdner/tagebuchOverview.html" class="back-button">
+                <i class="fas fa-arrow-left"></i> Home
+            </a>
+
+            
+        </div>
+        <div class="tagebuch-section">
+            <h1>Tagebuch</h1>
+            <form id="tagebuchForm">
+                <label for="dayEntry">Schreibe hier über deinen Tag:</label>
+                <textarea id="dayEntry" name="dayEntry" rows="4" placeholder="Was ist heute passiert?" title="Schreibe über deinen Tag"></textarea>
+            
+                <label for="highlight">Was war heute dein Highlight?</label>
+                <textarea id="highlight" name="highlight" rows="2" placeholder="Z.B. ein Moment der Freude" title="Dein Highlight des Tages"></textarea>
+            
+                <label for="challenges">Gab es Herausforderungen?</label>
+                <textarea id="challenges" name="challenges" rows="2" placeholder="Z.B. eine schwierige Aufgabe" title="Herausforderungen des Tages"></textarea>
+            
+                <label for="solutions">Wie wurden diese gehandelt?</label>
+                <textarea id="solutions" name="solutions" rows="2" placeholder="Beschreibe, wie du diese gelöst hast" title="Lösungen für Herausforderungen"></textarea>
+                <div id="moodDisplay" class="hidden">
+                    <img id="moodImage" src="" alt="Deine Stimmung" class="hidden" />
+                </div>
+                <button type="button" id="moodButton">Stimmung hinzufügen</button>
+                
+            
+                <button type="submit" id="saveButton">Speichern</button>
+            </form>
+            
+        </div>
+        <div id="moodSlider" class="slider-popup hidden">
+            <div class="slider-container">
+                <h2 id="moodHeading">Wie fühlst du dich heute?</h2>
+                <div class="emoji-with-text">
+                    <img id="sliderEmoji" src="../Images/gut.png" alt="Mood Emoji">
+                    <span id="sliderEmojiText">Gut</span>
+                </div>
+        
+                <label for="moodRange" id="moodLabel">
+                    <span>Stimmung von Schlimm (1) bis Super Gut (5)</span>
+                </label>
+                
+                <input 
+                    type="range" 
+                    id="moodRange" 
+                    min="1" 
+                    max="5" 
+                    value="3" 
+                    title="Wähle deine Stimmung von Schlimm bis Super Gut" 
+                    aria-labelledby="moodHeading moodLabel">
+                
+                <button id="closeSlider">Schließen</button>
+            </div>
+        </div>
+        
+        
+    </div>
+</body>
+</html>
