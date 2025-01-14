@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings - Übersicht</title>
+    <link rel="stylesheet" href="../../mindfulpathhome.css">
+    <link rel="stylesheet" href="settingsOverviewStyle.css">
+    <link
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        rel="stylesheet"
+    >
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <h1 class="title">Personalisierung</h1>
+
+        <!-- Settings Options -->
+        <div class="settings-container">
+            <div class="settings-item" onclick="window.location.href='language.html';">
+                <span>Sprache</span>
+                <span>Deutsch</span>
+            </div>
+            <hr>
+            <div class="settings-item" onclick="window.location.href='edit-profile.html';">
+                <span>Profil bearbeiten</span>
+            </div>
+            <hr>
+            <div class="settings-item" onclick="window.location.href='notifications.html';">
+                <span>Benachrichtigung</span>
+            </div>
+            <hr>
+            <div class="settings-item" onclick="window.location.href='color-theme.html';">
+                <span>Farbpalette ändern</span>
+            </div>
+            <hr>
+            <div class="settings-item" onclick="window.location.href='emergency.html';">
+                <span>Notfall</span>
+            </div>
+            <hr>
+            <div class="settings-item">
+                <label for="dark-mode-toggle">Dark Mode</label>
+                <input type="checkbox" id="dark-mode-toggle" aria-label="Toggle dark mode">
+            </div>
+        </div>
+
+        <!-- Navbar -->
+        <div class="bottom-nav">
+            <div class="nav-item">
+                <i class="fas fa-home nav-icon" onclick="window.location.href='../../homepage.html';"></i>
+                <span>Home</span>
+            </div>
+            <div class="nav-item">
+                <i class="fas fa-tasks nav-icon" onclick="window.location.href='../../toDo.html';"></i>
+                <span>Aufgaben</span>
+            </div>
+            <div class="nav-item">
+                <i class="fas fa-chart-line nav-icon"></i>
+                <span>Statistik</span>
+            </div>
+            <div class="nav-item">
+                <i class="fas fa-question-circle nav-icon"></i>
+                <span>Fragen</span>
+            </div>
+            <div class="nav-item">
+                <i class="fas fa-cogs nav-icon"></i>
+                <span>Einstellungen</span>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Dark mode toggle functionality
+        const toggle = document.getElementById('dark-mode-toggle');
+        toggle.addEventListener('change', () => {
+            document.body.classList.toggle('dark-mode');
+        });
+    </script>
+</body>
+</html>

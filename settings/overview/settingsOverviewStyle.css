@@ -1,0 +1,134 @@
+/* Settings Container */
+
+
+.settings-container {
+    padding: 15px;
+    background-color: #fff;
+    flex-grow: 1;
+    overflow-y: auto; /* Allow scrolling if content exceeds height */
+}
+
+/* Settings Items */
+.settings-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    margin-bottom: 10px;
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.settings-item:hover {
+    background-color: #e8f5e9;
+}
+
+.settings-item span {
+    font-size: 16px;
+    color: #333;
+}
+
+.settings-item label {
+    font-size: 16px;
+    color: #333;
+    margin-right: 10px;
+}
+
+.settings-item input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+/* Divider */
+hr {
+    border: none;
+    height: 1px;
+    background-color: #ddd;
+    margin: 10px 0;
+}
+
+/* Dark Mode Styling */
+.dark-mode {
+    background-color: #121212;
+    color: #fff;
+}
+
+.dark-mode .settings-container {
+    background-color: #1d1d1d;
+    color: #fff
+}
+.dark-mode .settings-item {
+    background: #1d1d1d;
+    border-color: #333;
+    color: #fff;
+}
+
+.dark-mode .settings-item:hover {
+    background-color: #292929;
+}
+
+.dark-mode hr {
+    background-color: #444;
+}
+
+.dark-mode .bottom-nav {
+    background-color: #1d1d1d;
+    border-top-color: #333;
+}
+
+.dark-mode .nav-item {
+    color: #bbb;
+}
+
+.dark-mode .nav-item:hover {
+    color: #fff;
+}
+
+.dark-mode .title {
+    color: #fff;
+}
+.dark-mode .settings-item span, 
+.dark-mode .settings-item label {
+    color: #fff; /* Make text white in dark mode */
+}
+/* Navigation Bar */
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: #fff;
+    border-top: 1px solid #ddd;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.nav-item {
+    text-align: center;
+    font-size: 14px;
+    color: #555;
+    cursor: pointer;
+}
+
+.nav-icon {
+    font-size: 20px;
+    color: #555;
+}
+
+.nav-item:hover .nav-icon, 
+.nav-item:hover {
+    color: green;
+}
+
+.title {
+    text-align: center;
+    font-size: 38px;
+    font-weight: bold;
+    color: #000000; /* Orange für den Titel */
+    margin: 0;
+}
