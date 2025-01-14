@@ -182,3 +182,13 @@ body {
     height: 6vw;
     margin-bottom: 5px;
 }
+
+.dark-mode {
+    background-color: #121212;
+    color: #fff;
+}
+
+.dark-mode .app-container {
+    border-color: #333;
+    background-color: #1d1d1d;
+}
