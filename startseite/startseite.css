@@ -1,0 +1,75 @@
+/* Allgemeine Stile */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(180deg, #0D1612 0%, #28472E 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: white;
+}
+
+.start-container {
+    max-width: 100%;
+    width: 390px;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    overflow: hidden;
+    height: 100vh; 
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo {
+    width: 150px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.title {
+    font-size: 32px;
+    font-weight: bold;
+    color: #FFA500; /* Orange für den Titel */
+    margin: 0;
+}
+
+.subtitle {
+    font-size: 14px;
+    margin-top: 10px;
+    color: #FFFFFF; /* Weißer Untertitel */
+}
+
+/* Start-Button */
+.start-button {
+    margin-top: 30px;
+    padding: 10px 20px;
+    background: #FFFFFF; /* Weißer Hintergrund */
+    color: #0D1612; /* Dunkler Text */
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 25px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.start-button:hover {
+    transform: scale(1.05);
+    background: #F0F0F0;
+}
+
+.start-button span {
+    font-size: 20px;
+    color: #0D1612;
+    margin-left: 5px;
+}
