@@ -153,31 +153,36 @@ body {
 
 /* Navigation Bar */
 .bottom-nav {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    background: #fff;
-    border-top: 1px solid #ddd;
     display: flex;
     justify-content: space-around;
+    align-items: center;
     padding: 10px 0;
+    background-color: #fff;
+    border-top: 1px solid #ccc;
+    flex-shrink: 0;
     box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
 }
+
 .nav-item {
-    text-align: center;
-    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 3.5vw;
     color: #555;
     cursor: pointer;
 }
 
-.nav-icon {
-    font-size: 20px;
-    color: #555;
-}
-
-.nav-item:hover .nav-icon, 
 .nav-item:hover {
     color: green;
+}
+
+.nav-icon {
+    width: 6vw;
+    height: 6vw;
+    margin-bottom: 5px;
+    font-size: 20px;
+    color: #555;
 }
 
 .dark-mode {
