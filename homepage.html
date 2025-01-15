@@ -6,77 +6,79 @@
     <title>Homepage</title>
     <link rel="stylesheet" href="mindfulpathhome.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="/settings/farbpaletten/localstorage/palette.js" defer></script>
+    
 </head>
 <body>
     <div class="app-container">
        <!--Welcome Section -->
-<div class="welcome-section">
-    <h1>Willkommen zurück,<span><br>Robert Walter</span></h1>
-    <img src="mountain.jpg" alt="Mountain" class="background-image">
-    <p class="blurred-text">Du bist stärker, als du denkst – zeig es der Welt!</p>
+    <div class="welcome-section">
+        <h1>Willkommen zurück,<span><br>Robert Walter</span></h1>
+        <img src="mountain.jpg" alt="Mountain" class="background-image">
+        <p class="blurred-text">Du bist stärker, als du denkst – zeig es der Welt!</p>
 
-</div>
-
-<!-- Tasks Section -->
-<div class="tasks-section">
-    <div id="taskListHomepage"></div>
-</div>
-
-<script>
-    // tasks auf der homepage
-    function loadTasksOnHomepage() {
-        const taskListHomepage = document.getElementById('taskListHomepage');
-        taskListHomepage.innerHTML = '';
-        const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
-
-        tasks.forEach(taskText => {
-            const taskItem = document.createElement('div');
-            taskItem.className = 'task';
-            taskItem.innerHTML = `<input type="checkbox"><label>${taskText}</label>`;
-            taskListHomepage.appendChild(taskItem);
-        });
-    }
-
-    window.onload = loadTasksOnHomepage;
-</script>
-
-
-<!-- Auswahl Extras Section-->
-<div class="extras-section">
-    <div class="extra-item">
-        <a href="/tagebuch/tagebuchOrdner/tagebuchOverview.html" class="back-button">
-        <i class="fas fa-book"></i>
-        <span>Tagebuch</span>
-        </a>
     </div>
-    <div class="extra-item">
-        <i class="fas fa-file-alt"></i>
-        <span>Protokollübersicht</span>
-    </div>
-</div>
 
-     <!-- Navigation Bar -->
-<div class="bottom-nav">
-    <div class="nav-item">
-        <i class="fas fa-home nav-icon" onclick="window.location.href='homepage.html';"></i>
-        <span>Home</span>
+    <!-- Tasks Section -->
+    <div class="tasks-section">
+        <div id="taskListHomepage"></div>
     </div>
-    <div class="nav-item">
-        <i class="fas fa-tasks nav-icon" onclick="window.location.href='toDo.html';" ></i>
-        <span>Aufgaben</span>
+
+    <script>
+        // tasks auf der homepage
+        function loadTasksOnHomepage() {
+            const taskListHomepage = document.getElementById('taskListHomepage');
+            taskListHomepage.innerHTML = '';
+            const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+
+            tasks.forEach(taskText => {
+                const taskItem = document.createElement('div');
+                taskItem.className = 'task';
+                taskItem.innerHTML = `<input type="checkbox"><label>${taskText}</label>`;
+                taskListHomepage.appendChild(taskItem);
+            });
+        }
+
+        window.onload = loadTasksOnHomepage;
+    </script>
+
+
+    <!-- Auswahl Extras Section-->
+    <div class="extras-section">
+        <div class="extra-item">
+            <a href="/tagebuch/tagebuchOrdner/tagebuchOverview.html" class="back-button">
+            <i class="fas fa-book"></i>
+            <span>Tagebuch</span>
+            </a>
+        </div>
+        <div class="extra-item">
+            <i class="fas fa-file-alt"></i>
+            <span>Protokollübersicht</span>
+        </div>
     </div>
-    <div class="nav-item">
-        <i class="fas fa-chart-line nav-icon"></i>
-        <span>Statistik</span>
-    </div>
-    <div class="nav-item">
-        <i class="fas fa-question-circle nav-icon"></i>
-        <span>Fragen</span>
-    </div>
-    <div class="nav-item">
-        <i class="fas fa-cogs nav-icon" onclick="window.location.href='../settings/overview/settingsOverview.html';"></i>
-        <span>Einstellungen</span>
-    </div>
+
+        <!-- Navigation Bar -->
+    <div class="bottom-nav">
+        <div class="nav-item">
+            <i class="fas fa-home nav-icon" onclick="window.location.href='homepage.html';"></i>
+            <span>Home</span>
+        </div>
+        <div class="nav-item">
+            <i class="fas fa-tasks nav-icon" onclick="window.location.href='toDo.html';" ></i>
+            <span>Aufgaben</span>
+        </div>
+        <div class="nav-item">
+            <i class="fas fa-chart-line nav-icon"></i>
+            <span>Statistik</span>
+        </div>
+        <div class="nav-item">
+            <i class="fas fa-question-circle nav-icon"></i>
+            <span>Fragen</span>
+        </div>
+        <div class="nav-item">
+            <i class="fas fa-cogs nav-icon" onclick="window.location.href='../settings/overview/settingsOverview.html';"></i>
+            <span>Einstellungen</span>
+        </div>
 </div>
 </body>
 </html>

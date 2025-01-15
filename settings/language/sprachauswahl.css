@@ -3,7 +3,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f5f5f5;
+    background-color: var(--background-color);
     overflow-x: hidden;
 }
 
@@ -11,10 +11,10 @@ body {
     max-width: 100%;
     width: 390px;
     margin: 0 auto;
-    border: 1px solid #ccc;
+    border: 1px solid var(--border-color);
     border-radius: 20px;
     overflow: hidden;
-    background-color: white;
+    background-color: var(--background-color);
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -26,14 +26,14 @@ body {
     align-items: center;
     justify-content: space-between;
     padding: 10px 15px;
-    background-color: #fafbff;
-    border-bottom: 1px solid #d9d9d9;
+    background-color: var(--background-color);
+    border-bottom: 1px solid var(--border-color);
     border-radius: 20px 20px 0 0;
 }
 
 .back-button {
     text-decoration: none;
-    color: #468151;
+    color: var(--primary-color);
     font-size: 16px;
     font-weight: bold;
     display: flex;
@@ -46,7 +46,7 @@ body {
 
 .header h1 {
     font-size: 18px;
-    color: #2c2c2c;
+    color: var(--text-color);
     font-weight: bold;
     margin: 0;
 }
@@ -63,19 +63,19 @@ body {
 .language-icon {
     width: 50px;
     height: 50px;
-    background: #f5f5f5;
+    background: var(--hover-background-color);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 24px;
-    color: #468151;
+    color: var(--primary-color);
 }
 
 .current-language p {
     font-size: 16px;
     font-weight: bold;
-    color: #2c2c2c;
+    color: var(--text-color);
     margin-top: 10px;
 }
 
@@ -83,15 +83,19 @@ body {
 .search-bar {
     padding: 0 15px;
     margin-bottom: 10px;
+    max-width: 100%;
+    margin-right: 20px;
 }
 
 .search-bar input {
     width: 100%;
     padding: 10px;
-    border: 1px solid #d9d9d9;
+    border: 1px solid var(--border-color);
     border-radius: 5px;
     font-size: 14px;
     outline: none;
+    background-color: var(--background-color);
+    color: var(--text-color);
 }
 
 /* Sprachenliste */
@@ -108,11 +112,11 @@ body {
     align-items: center;
     padding: 10px;
     margin-bottom: 5px;
-    border: 1px solid #d9d9d9;
+    border: 1px solid var(--border-color);
     border-radius: 5px;
-    background: #fafbff;
+    background: var(--hover-background-color);
     font-size: 14px;
-    color: #2c2c2c;
+    color: var(--text-color);
     cursor: pointer;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
@@ -126,18 +130,18 @@ body {
 .language-item img {
     width: 24px;
     height: 16px;
-    border: 1px solid #2c2c2c69;
+    border: 1px solid rgba(44, 44, 44, 0.4);
     border-radius: 3px;
 }
 
 .language-item.active {
-    background: #e8f5e9;
-    color: #468151;
-    border: 1px solid #468151;
+    background: var(--button-gradient);
+    color: var(--text-color);
+    border: 1px solid var(--primary-color);
 }
 
 .language-item.active i {
-    color: #468151;
+    color: var(--primary-color);
 }
 
 .language-item i {
@@ -147,8 +151,8 @@ body {
 }
 
 .language-item:hover {
-    background: #f0f0f0;
-    color: #468151;
+    background: var(--hover-background-color);
+    color: var(--primary-color);
 }
 
 /* Scrollbar Styles */
@@ -157,37 +161,40 @@ body {
 }
 
 .language-list::-webkit-scrollbar-thumb {
-    background: #468151;
+    background: var(--scrollbar-color);
     border-radius: 5px;
 }
 
 .language-list::-webkit-scrollbar-thumb:hover {
-    background: #356941;
+    background: var(--scrollbar-hover-color);
 }
+
+/* Bottom Navigation */
 .bottom-nav {
     position: fixed;
     bottom: 0;
     width: 100%;
-    background: #fff;
-    border-top: 1px solid #ddd;
+    background: var(--background-color);
+    border-top: 1px solid var(--border-color);
     display: flex;
     justify-content: space-around;
     padding: 10px 0;
     box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
 }
+
 .nav-item {
     text-align: center;
     font-size: 14px;
-    color: #555;
+    color: var(--text-color);
     cursor: pointer;
 }
 
 .nav-icon {
     font-size: 20px;
-    color: #555;
+    color: var(--text-color);
 }
 
-.nav-item:hover .nav-icon, 
+.nav-item:hover .nav-icon,
 .nav-item:hover {
-    color: green;
+    color: var(--primary-color);
 }
