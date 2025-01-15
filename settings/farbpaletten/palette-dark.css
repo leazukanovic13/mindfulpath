@@ -1,0 +1,12 @@
+:root {
+    --primary-color: #388e3c;
+    --secondary-color: #292929;
+    --background-color: #121212;
+    --text-color: #fff;
+    --border-color: #333;
+    --hover-background-color: #1d1d1d;
+    --button-gradient: linear-gradient(to right, var(--secondary-color), var(--primary-color));
+    --shadow-color: rgba(255, 255, 255, 0.1);
+    --scrollbar-color: #388e3c;
+    --scrollbar-hover-color: #468151;
+}

@@ -1,9 +1,7 @@
 /* Settings Container */
-
-
 .settings-container {
     padding: 15px;
-    background-color: #fff;
+    background-color: var(--background-color);
     flex-grow: 1;
     overflow-y: auto; /* Allow scrolling if content exceeds height */
 }
@@ -15,25 +13,26 @@
     align-items: center;
     padding: 15px 20px;
     margin-bottom: 10px;
-    background: #f9f9f9;
-    border: 1px solid #ddd;
+    background: var(--hover-background-color);
+    border: 1px solid var(--border-color);
     border-radius: 10px;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
 .settings-item:hover {
-    background-color: #e8f5e9;
+    background-color: var(--button-gradient);
+    color: var(--text-color);
 }
 
 .settings-item span {
     font-size: 16px;
-    color: #333;
+    color: var(--text-color);
 }
 
 .settings-item label {
     font-size: 16px;
-    color: #333;
+    color: var(--text-color);
     margin-right: 10px;
 }
 
@@ -47,17 +46,15 @@
 hr {
     border: none;
     height: 1px;
-    background-color: #ddd;
+    background-color: var(--border-color);
     margin: 10px 0;
 }
 
-
-
-
+/* Title */
 .title {
     text-align: center;
     font-size: 38px;
     font-weight: bold;
-    color: #000000; /* Orange für den Titel */
+    color: var(--text-color); /* Use text color variable */
     margin: 0;
 }
