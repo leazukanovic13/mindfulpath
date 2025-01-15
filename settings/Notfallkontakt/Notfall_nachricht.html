@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do Liste</title>
+    <link rel="stylesheet" href="mindfulpathhome.css">
+    <link rel="stylesheet" href="Notfall_anruf.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="/settings/farbpaletten/localstorage/palette.js" defer></script>
+</head>
+<body>
+    <div class="app-container">
+        <div class="header">
+            <h1>Notfallnachricht</h1>
+            
+        </div>
+        <div class="back_button">
+            <a href="Notfall.html" class="back-button">
+                <i class="fas fa-arrow-left"></i> Notfall
+            </a>
+          </div>
+
+      <div class="options">
+        <img src="Notfall.png" alt="Warnung">
+        <p>Wer soll die Nachricht erhalten?</p>
+      </div>
+     
+    </style>
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        const listItems = document.querySelectorAll(".list-item");
+  
+        listItems.forEach(item => {
+          item.addEventListener("click", () => {
+            const imageContainer = item.querySelector(".image-container");
+            if (imageContainer.style.display === "none" || !imageContainer.style.display) {
+              imageContainer.style.display = "block";
+            } else {
+              imageContainer.style.display = "none";
+            }
+          });
+        });
+      });
+    </script>
+      <div class="list">
+        <div class="list-item">
+          <span>Adam Smith</span>
+          <div class="image-container">
+            <img src="Haken.png" alt="">
+          </div>
+        </div>
+        <div class="list-item">
+          <span>Joe Mama</span>
+          <div class="image-container">
+            <img src="Haken.png" alt="">
+          </div>
+        </div>
+        <div class="list-item">
+          <span>Jake Adams</span>
+          <div class="image-container">
+            <img src="Haken.png" alt="">
+          </div>
+        </div>
+        <div class="list-item">
+            <span>Adreas Torres</span>
+            <div class="image-container">
+                <img src="Haken.png" alt="">
+              </div>
+          </div>
+      </div>
+  
+      
+        <div class="bottom-nav">
+            <div class="nav-item" onclick="window.location.href='../../homepage.html';"><i class="fas fa-home nav-icon"></i><span>Home</span></div>
+            <div class="nav-item" onclick="window.location.href='../../toDo.html';">
+                <i class="fas fa-tasks nav-icon"></i>
+                <span>Aufgaben</span>
+            </div>
+            <div class="nav-item"onclick="window.location.href='../Statistik/Statistik.html';"><i class="fas fa-chart-line nav-icon"></i><span>Statistik</span></div>
+            <div class="nav-item"><i class="fas fa-question-circle nav-icon"></i><span>Fragen</span></div>
+            <div class="nav-item"onclick="window.location.href='../overview/settingsOverview.html';"><i class="fas fa-cogs nav-icon"></i><span>Einstellungen</span></div>
+        </div>
+    </div>
+    
+    
+    
+</body>
+</html>
