@@ -1,0 +1,175 @@
+/* General Dark Mode Styles */
+.dark-mode {
+    background-color: #121212;
+    color: #fff;
+}
+
+/* Header */
+.dark-mode .header {
+    background-color: #1d1d1d;
+    color: #fff;
+}
+
+/* Header h1*/
+.dark-mode .header h1 {
+    color: #fff;
+}
+
+
+/*App Container */
+body.dark-mode .app-container {
+    background-color: #1d1d1d;
+    color: #fff;
+}
+
+/* Settings Container */
+.dark-mode .settings-container {
+    background-color: #1d1d1d;
+    color: #fff;
+}
+
+/* Settings Items */
+.dark-mode .settings-item {
+    background: #1d1d1d;
+    border-color: #333;
+    color: #fff;
+}
+
+.dark-mode .settings-item:hover {
+    background-color: #292929;
+}
+
+/* Horizontal Rule */
+.dark-mode hr {
+    background-color: #444;
+}
+
+/* Bottom Navigation */
+.dark-mode .bottom-nav {
+    background-color: #1d1d1d;
+    border-top-color: #333;
+}
+
+.dark-mode .nav-item {
+    color: #bbb;
+}
+
+.dark-mode .nav-item:hover {
+    color: #fff;
+}
+
+/* Title */
+.dark-mode .title {
+    color: #fff;
+}
+
+/* Settings Item Text */
+.dark-mode .settings-item span, 
+.dark-mode .settings-item label {
+    color: #fff; /* Make text white in dark mode */
+}
+
+/* Homepage extras-section*/
+/* Extras Section - Dark Mode */
+body.dark-mode .extras-section {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 5vw;
+}
+
+/* Extra Item - Dark Mode */
+body.dark-mode .extra-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: #1d1d1d; /* Dark background */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1); /* Subtle light shadow */
+    flex: 1;
+    margin: 0 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+body.dark-mode .extra-item:hover {
+    background: linear-gradient(to right, #2c2c2c, #468151); /* Slightly lighter background on hover */
+}
+
+/* Icon - Dark Mode */
+body.dark-mode .extra-item i {
+    font-size: 6vw;
+    color: #388e3c; /* Brighter green for icons */
+    margin-bottom: 10px;
+}
+
+/* Text - Dark Mode */
+body.dark-mode .extra-item span {
+    font-size: 4.5vw;
+    color: #fff; /* Light gray for text */
+}
+
+/* Tagebuch period-selector */
+.dark-mode .period-button {
+    background-color: #292929;
+    color: #fff;
+}
+
+/* Tagebuch entry-button*/
+.dark-mode .entry-button {
+    background-color: #292929;
+    color: #fff;
+    border: none;
+}
+
+/* Tagebuch entry-button:hover*/
+.dark-mode .entry-button:hover {
+    background: linear-gradient(to right, #2c2c2c, #468151);
+}
+
+/* Tagebuch form h1, Label, textarea */
+.dark-mode form h1,
+.dark-mode label,
+.dark-mode textarea {
+    color: #fff;
+    background: #1d1d1d;
+}
+
+/* Tagebuch form textarea */
+.dark-mode form textarea {
+    background: #292929;
+}
+
+/* Sprachauswahl */
+.dark-mode .language-item {
+    background: #1d1d1d;
+    color: #fff;
+}
+
+.dark-mode .language-item.active {
+    background: linear-gradient(to left, #2c2c2c, #468151);
+    color: #fff;
+}
+
+/* Sprachauswahl i, p */
+.dark-mode .language-item i,
+.dark-mode .language-item p {
+    color: #fff;
+}
+
+/* Sprachauswahl search-bar */
+.dark-mode .search-bar input {
+    background: #292929;
+    color: #fff;
+}
+
+/* Sprachauswahl current-language p */
+.dark-mode .current-language p {
+    color: #fff;
+}
+
+
+
+

@@ -116,7 +116,7 @@ body {
     margin: 0 auto 20px;
     padding: 12px 0;
     text-align: center;
-    background: #468151;
+    background: linear-gradient(to right, #2c2c2c, #468151);
     color: white;
     border: none;
     border-radius: 5px;
