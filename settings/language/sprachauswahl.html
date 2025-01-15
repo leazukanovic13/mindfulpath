@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sprachauswahl</title>
+    <link rel="stylesheet" href="sprachauswahl.css">
+    <link rel="stylesheet" href="../../mindfulpathhome.css">
+    <script src="sprachauswahl.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <div class="header">
+            <a href="settings.html" class="back-button">
+                <i class="fas fa-arrow-left"></i> Personalisierung
+            </a>
+            <h1>Sprache</h1>
+        </div>
+
+        <!-- Aktuelle Sprache -->
+        <div class="current-language">
+            <div class="language-icon">
+                <i class="fas fa-globe"></i>
+            </div>
+            <p>Deutsch</p> <!-- Standardmäßig Deutsch -->
+        </div>
+
+        <!-- Suchfeld -->
+        <div class="search-bar">
+            <input type="text" placeholder="Suchen">
+        </div>
+
+        <!-- Sprachenliste -->
+        <div class="language-list">
+            <button class="language-item" data-language="spanish">
+                <div class="language-content">
+                    <img src="Images/ES - Spain.png" alt="Spanisch Flagge">
+                    <span>Spanisch</span>
+                </div>
+                <i class="fas fa-check"></i>
+            </button>
+            <button class="language-item" data-language="french">
+                <div class="language-content">
+                    <img src="Images/FR - France.png" alt="Französisch Flagge">
+                    <span>Französisch</span>
+                </div>
+                <i class="fas fa-check"></i>
+            </button>
+            <button class="language-item active" data-language="german">
+                <div class="language-content">
+                    <img src="Images/DE - Germany.png" alt="Deutsch Flagge">
+                    <span>Deutsch</span>
+                </div>
+                <i class="fas fa-check"></i>
+            </button>
+            <button class="language-item" data-language="chinese">
+                <div class="language-content">
+                    <img src="Images/CN - China.png" alt="Chinesisch Flagge">
+                    <span>Chinesisch</span>
+                </div>
+                <i class="fas fa-check"></i>
+            </button>
+            <button class="language-item" data-language="arabic">
+                <div class="language-content">
+                    <img src="Images/AE - United Arab Emirates.png" alt="Arabisch Flagge">
+                    <span>Arabisch</span>
+                </div>
+                <i class="fas fa-check"></i>
+            </button>
+            <button class="language-item" data-language="portuguese">
+                <div class="language-content">
+                    <img src="Images/PT - Portugal.png" alt="Portugiesisch Flagge">
+                    <span>Portugiesisch</span>
+                </div>
+                <i class="fas fa-check"></i>
+            </button>
+            <button class="language-item" data-language="russian">
+                <div class="language-content">
+                    <img src="Images/RU - Russian Federation.png" alt="Russisch Flagge">
+                    <span>Russisch</span>
+                </div>
+                <i class="fas fa-check"></i>
+            </button>
+        </div>
+        <div class="bottom-nav">
+            <div class="nav-item">
+                <i class="fas fa-home nav-icon" onclick="window.location.href='../../homepage.html';"></i>
+                <span>Home</span>
+            </div>
+            <div class="nav-item">
+                <i class="fas fa-tasks nav-icon" onclick="window.location.href='../../toDo.html';"></i>
+                <span>Aufgaben</span>
+            </div>
+            <div class="nav-item">
+                <i class="fas fa-chart-line nav-icon"></i>
+                <span>Statistik</span>
+            </div>
+            <div class="nav-item">
+                <i class="fas fa-question-circle nav-icon"></i>
+                <span>Fragen</span>
+            </div>
+            <div class="nav-item">
+                <i class="fas fa-cogs nav-icon"></i>
+                <span>Einstellungen</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
